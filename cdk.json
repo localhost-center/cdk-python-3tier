@@ -1,0 +1,58 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "azs": [
+      "ap-northeast-2a",
+      "ap-northeast-2c"
+    ],
+    "customer": "megazone",
+    "dev": {
+      "account_id": "899476744732",
+      "key_name": "leedy",
+      "private_instance_type": "t2.micro",
+      "desired_capacity": 2,
+      "min_capacity": 2,
+      "max_capacity": 3,
+      "stage_name": "dev",
+      "vpc_cidr": "10.0.0.0/16",
+      "vpc_prefix": "seoul",
+      "vpc_tenacy": "DEFAULT",
+      "subnet_prefix": "24",
+      "max_azs": "2",
+      "nat_number": "1",
+      "layers": {
+        "public": "PUBLIC",
+        "private": "PRIVATE",
+        "database": "ISOLATED"
+      },
+      "layer_nats": "public",
+      "active_flowlogs": "false",
+      "layer_endpoints": "private"
+    }
+  },
+  "prod": {
+    "account_id": "899476744732",
+    "key_name": "leedy",
+    "private_instance_type": "t2.micro",
+    "desired_capacity": 2,
+    "min_capacity": 2,
+    "max_capacity": 3,
+    "stage_name": "prod",
+    "vpc_cidr": "10.0.0.0/16",
+    "vpc_prefix": "seoul",
+    "vpc_tenacy": "DEFAULT",
+    "subnet_prefix": "24",
+    "max_azs": "2",
+    "nat_number": "1",
+    "layers": {
+      "nat": "PUBLIC",
+      "front": "PUBLIC",
+      "application": "PRIVATE",
+      "database": "ISOLATED",
+      "CACHE": "ISOLATED"
+    },
+    "layer_nats": "nat",
+    "active_flowlogs": "false",
+    "layer_endpoints": "application"
+  }
+}  
