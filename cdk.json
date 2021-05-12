@@ -5,10 +5,10 @@
       "ap-northeast-2a",
       "ap-northeast-2c"
     ],
-    "customer": "megazone",
+    "customer": "customer",
     "dev": {
-      "account_id": "899476744732",
-      "key_name": "leedy",
+      "account_id": "",
+      "key_name": "",
       "private_instance_type": "t2.micro",
       "desired_capacity": 2,
       "min_capacity": 2,
@@ -31,8 +31,8 @@
     }
   },
   "prod": {
-    "account_id": "899476744732",
-    "key_name": "leedy",
+    "account_id": "",
+    "key_name": "",
     "private_instance_type": "t2.micro",
     "desired_capacity": 2,
     "min_capacity": 2,
